@@ -1,0 +1,3 @@
+purple: #AA00FA
+black: #262626
+white: #ffffff
