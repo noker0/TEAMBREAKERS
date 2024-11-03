@@ -4,7 +4,7 @@
 const Home = ()=>{
     return(
         <>
-        <p>gggg</p>
+        <p></p>
         </>
     )
 }
