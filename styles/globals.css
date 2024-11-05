@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    background: #1f1f1f;
+}
