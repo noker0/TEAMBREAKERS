@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Main from "@/components/Main.jsx";
 import Cards from "@/components/Cards";
-
+import Pricing from "@/components/Pricing";
 
 const Home = ()=>{
     return(
@@ -9,6 +9,7 @@ const Home = ()=>{
             <Navbar/>
             <Main/>
             <Cards/>
+            <Pricing/>
         </>
     )
 }
