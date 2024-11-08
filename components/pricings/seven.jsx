@@ -4,7 +4,7 @@ import dev from '../../public/dev.png'
 import dw from '../../public/dw.png'
 
 
-const Startt = () => {
+const Seven = () => {
   return (
     <>
         <div className="w-[1160px] gap-[50px] h-[770px] bg-[black] border-[4px] border-[#AA00FA] rounded-[50px] flex justify-center items-center hover:shadow-[grey] duration-300 hover:translate-x-[10px]  hover:translate-y-[-10px] hover:shadow-[-15px_15px_0_0_rgba(0,0,0,0.3)] mb-[20px]">
@@ -12,7 +12,7 @@ const Startt = () => {
           <Image src={dev} className='w-[500px] h-[750px]'/>
         </div>
         <div className="right">
-            <p className='text-[#AA00FA] font-bold text-[60px]'>ПАКЕТ START</p>
+            <p className='text-[#AA00FA] font-bold text-[60px]'>ПАКЕТ ZXORY</p>
             <p className='text-white font-bold text-[20px] w-[550px] mb-[40px]'>Не знаешь с чего начать? Мы рекомендуем пакет «Start”. Это идеальное сочетание тренировок и совместных игр по самой выгодной цене.</p>
             <div className="bg-[white] w-[500px] mb-[25px] justify-between h-[120px] rounded-[20px] p-[10px] flex shadow-lg shadow-solidy duration-300 hover:translate-x-[5px] cursor-pointer hover:translate-y-[5px] hover:shadow-solid-dop hover:bg-[#AA00FA] hover:text-[white]">
                 <div className="">
@@ -45,4 +45,4 @@ const Startt = () => {
   )
 }
 
-export default Startt
+export default Seven

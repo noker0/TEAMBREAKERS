@@ -9,7 +9,9 @@ module.exports = {
     extend: {
       boxShadow: {
         'solid': '-10px -10px 0px rgba(225, 225, 225, 100)',
+        'solidy': '-10px -10px 0px rgba(170, 0, 250, 98)',
         'solid-dop': '-15px -15px 0px rgba(225, 225, 225, 100)',
+        'solid-dopy': '-15px -15px 0px rgba(170, 0, 250, 98)',
         'solid-top': '-15px 15px 0px rgba(225, 225, 225, 100)',
       },
       colors: {
