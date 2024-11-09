@@ -7,7 +7,7 @@ import dw from '../../public/dw.png'
 const Four = () => {
   return (
     <>
-        <div className="w-[1160px] gap-[50px] h-[770px] bg-[black] border-[4px] border-[#AA00FA] rounded-[50px] flex justify-center items-center hover:shadow-[grey] duration-300 hover:translate-x-[10px]  hover:translate-y-[-10px] hover:shadow-[-15px_15px_0_0_rgba(0,0,0,0.3)] mb-[20px]">
+        <div className="w-[1160px] gap-[50px] h-[770px] bg-[black] border-[4px] border-[#AA00FA] rounded-[50px] flex justify-center items-center hover:shadow-[grey] duration-300 hover:translate-x-[10px]  hover:translate-y-[-10px] hover:shadow-[-15px_15px_0_0_rgba(0,0,0,0.3)] mb-[20px] border-none">
         <div className="left pt-[43px] pl-[50px]">
           <Image src={dev} className='w-[500px] h-[750px]'/>
         </div>
