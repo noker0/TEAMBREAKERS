@@ -4,6 +4,8 @@ import Cards from "@/components/Cards";
 import Pricing from "@/components/Pricing";
 import Trainers from "@/components/Trainers";
 import TrainerCarousel from '@/components/TrainerCarousel';
+import TrainerCarousell from "@/components/TrainerCarousell";
+import TrainerCarouselll from "@/components/TrainerCarouselll";
 
 const Home = ()=>{
     return(
@@ -14,6 +16,8 @@ const Home = ()=>{
             <Pricing/>
             <Trainers/>
             <TrainerCarousel />
+            <TrainerCarousell/>
+            <TrainerCarouselll/>
         </>
     )
 }

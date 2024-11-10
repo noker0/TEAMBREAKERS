@@ -5,15 +5,15 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 
-const TrainerCarousel = () => {
+const TrainerCarouselll = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const trainers = [
     {
-      image: "/ch.png", 
+      image: "/cha.png", 
       game: "VALORANT",
       title: "ТИТУЛЬНЫЙ ТРЕНЕР",
-      name: "SheN",
+      name: "ChaPPi",
       stats: ["RADIANT", "ОПЫТ 2 ГОДА"],
       achievements: [
         "Мейн роль - Дуэлант",
@@ -22,10 +22,10 @@ const TrainerCarousel = () => {
       ]
     },
     {
-      image: "/f.png", 
+      image: "/k.png", 
       game: "DOTA 2",
       title: "ТИТУЛЬНЫЙ ТРЕНЕР",
-      name: "FlareRu",
+      name: "KARPZ",
       stats: ["11500 MMR", "ОПЫТ БОЛЕЕ 3.5 ЛЕТ"],
       achievements: [
         "Ключевые роли - 3/4/5. Выиграл 6 турниров от ВК Плей на авг 8-9К mmr",
@@ -34,10 +34,10 @@ const TrainerCarousel = () => {
       ]
     },
     {
-      image: "/j.png", 
+      image: "/is.png", 
       game: "CS2",
       title: "ТИТУЛЬНЫЙ ТРЕНЕР",
-      name: "JIuTuYm",
+      name: "ISKA",
       stats: ["3000 ELO CS2", "4200 ELO CSGO", "ОПЫТ 3 ГОДА"],
       achievements: [
         "Ex-капитан Meta4pro",
@@ -162,4 +162,4 @@ const TrainerCarousel = () => {
   );
 };
 
-export default TrainerCarousel;
+export default TrainerCarouselll;

@@ -5,28 +5,28 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 
-const TrainerCarousel = () => {
+const TrainerCarousell = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const trainers = [
     {
-      image: "/ch.png", 
+      image: "/a.png", 
       game: "VALORANT",
       title: "ТИТУЛЬНЫЙ ТРЕНЕР",
-      name: "SheN",
-      stats: ["RADIANT", "ОПЫТ 2 ГОДА"],
+      name: "AKUNOSAI",
+      stats: ["RADIANT", "ОПЫТ 3 ГОДА"],
       achievements: [
-        "Мейн роль - Дуэлант",
+        "Мейн роль - Дуэлант,Страж",
         "Опыт игры с PRO, VCT Contenders",
-        "Более 5000 часов игры на Jett"
+        "3500 ELO FACIT"
       ]
     },
     {
-      image: "/f.png", 
-      game: "DOTA 2",
-      title: "ТИТУЛЬНЫЙ ТРЕНЕР",
-      name: "FlareRu",
-      stats: ["11500 MMR", "ОПЫТ БОЛЕЕ 3.5 ЛЕТ"],
+      image: "/ami.png", 
+      game: "VALORANT",
+      title: "PRO-ТРЕНЕР",
+      name: "AmiRacle",
+      stats: ["Imortal 3", "ОПЫТ БОЛЕЕ 2 ЛЕТ"],
       achievements: [
         "Ключевые роли - 3/4/5. Выиграл 6 турниров от ВК Плей на авг 8-9К mmr",
         "Имеет первый спортивный разряд по киберспорту",
@@ -34,11 +34,11 @@ const TrainerCarousel = () => {
       ]
     },
     {
-      image: "/j.png", 
-      game: "CS2",
+      image: "/sh.png", 
+      game: "DOTA 2",
       title: "ТИТУЛЬНЫЙ ТРЕНЕР",
-      name: "JIuTuYm",
-      stats: ["3000 ELO CS2", "4200 ELO CSGO", "ОПЫТ 3 ГОДА"],
+      name: "SHADOW",
+      stats: ["RADIANT", "11000 MMR DOTA 2", "ОПЫТ 3 ГОДА"],
       achievements: [
         "Ex-капитан Meta4pro",
         "Действующий командный тренер и аналитик",
@@ -162,4 +162,4 @@ const TrainerCarousel = () => {
   );
 };
 
-export default TrainerCarousel;
+export default TrainerCarousell;
