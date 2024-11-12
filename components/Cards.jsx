@@ -1,12 +1,20 @@
+"use client"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react"
 import React from 'react'
 import Image from "next/image"
 import dw from '../public/wd.png'
 
+
 const Cards = () => {
+    useEffect (() =>{
+        AOS.init({})
+      },[])
   return (
     <>
-        <div className="flex justify-center m-[50px]">
-            <div className="w-[1160px] h-[370px] bg-[black] text-white rounded-[50px] border-[white] border-[5px] pl-[40px] pt-[30px] cursor-pointer duration-300 hover:translate-x-[10px] hover:translate-y-[-10px] hover:border-b-[15px] hover:border-l-[15px]  ">
+        <div className="flex justify-center m-[50px]" data-aos="fade-up-right">
+            <div  className="w-[1160px] h-[370px] bg-[black] text-white rounded-[50px] border-[white] border-[5px] pl-[40px] pt-[30px] cursor-pointer duration-300 hover:translate-x-[10px] hover:translate-y-[-10px] hover:border-b-[15px] hover:border-l-[15px]  ">
                 <p className='font-bold text-[50px] '>О нас в цифрах:</p>
                 <p className='font-bold text-[25px] leading-[20px]'>Мы тренировочная платформа №1 во всём мире!</p>
                 <div className="flex mt-[20px] items-center gap-[50px] justify-center">
@@ -33,7 +41,7 @@ const Cards = () => {
             </div>
         </div>
 
-        <div className="flex gap-[50px] justify-center mt-[120px] mb-[50px]">
+        <div className="flex gap-[50px] justify-center mt-[120px] mb-[50px]" data-aos="fade-up-right">
             <div className="bg-[black] w-[272px] h-[183px] rounded-[25px] border-[1px] border-[white] p-[15px] pt-[15px] flex shadow-lg shadow-solid duration-300 hover:translate-x-[5px] cursor-pointer hover:translate-y-[5px] hover:shadow-solid-dop">
                 <div className="">
                 <p className='text-[white] text-[23px] font-bold w-[200px]'>Результат гарантирован</p>
@@ -49,7 +57,7 @@ const Cards = () => {
                 <p className='text-[white] font-bold text-[13px] mt-[10px]'>Наши тренеры - топ 1-2% лучших игроков в мире</p>
                 </div>
                 <div className="flex items-end">
-                    <Image src={dw} className='w-[70px] h-[30px]'/>
+                    <Image src={dw} className='w-[50px] h-[30px]'/>
                 </div>
             </div>
             <div className="bg-[black] w-[272px] h-[183px] rounded-[25px] border-[1px] border-[white] p-[15px] pt-[15px] flex shadow-lg shadow-solid duration-300 hover:translate-x-[5px] cursor-pointer hover:translate-y-[5px] hover:shadow-solid-dop">
@@ -67,7 +75,7 @@ const Cards = () => {
                 <p className='text-[white] font-bold text-[13px] mt-[10px]'>Стань стримером, тренером, профессиональным игроком </p>
                 </div>
                 <div className="flex items-end">
-                    <Image src={dw} className='w-[70px] h-[30px]'/>
+                    <Image src={dw} className='w-[50px] h-[30px]'/>
                 </div>
             </div>
         </div>

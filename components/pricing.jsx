@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import fg from '../public/fg.png'
@@ -11,6 +12,9 @@ import Five from './pricings/five'
 import Six from './pricings/six'
 import Seven from './pricings/seven'
 import Eight from './pricings/Eight'
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react"
 
 const Pricing = () => {
     const [showThere, setShowThere] = useState(true);
@@ -111,13 +115,18 @@ const Pricing = () => {
     setShowSix(false);
     setShowSeven(false);
     }
+
+
+    useEffect (() =>{
+      AOS.init({})
+    },[])
     return (
         <>
       
-        <div className="flex justify-center my-[50px] mt-[150px]">
+        <div className="flex justify-center my-[50px] mt-[150px]" data-aos="zoom-in">
             <p className='text-[white] text-[50px]'>НАБОРЫ✌</p>
         </div>
-            <div className="">
+            <div className="" data-aos="zoom-in">
                 <div className="top flex items-center justify-center gap-[20px]">
                     <div className="left flex flex-col gap-[15px]">
                         <div className="bg-[black] w-[400px] h-[100px] rounded-[25px] border-[2px] border-[#AA00FA] pulse-glow">
@@ -202,7 +211,7 @@ const Pricing = () => {
                 </div>
             </div>
 
-            <div className="mt-[100px] flex justify-center">
+            <div className="mt-[100px] flex justify-center"  >
             {showThere && <There />}
             {showStart && <Startt />}
             {showTwo && <Two />}

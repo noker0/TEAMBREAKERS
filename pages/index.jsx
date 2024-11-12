@@ -10,6 +10,7 @@ import TrainerCarouselll from "@/components/TrainerCarouselll";
 const Home = ()=>{
     return(
         <>
+        <div>
             <Navbar/>
             <Main/>
             <Cards/>
@@ -18,6 +19,7 @@ const Home = ()=>{
             <TrainerCarousel />
             <TrainerCarousell/>
             <TrainerCarouselll/>
+        </div>
         </>
     )
 }

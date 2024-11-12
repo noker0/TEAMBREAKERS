@@ -1,5 +1,8 @@
 'use client';
 
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react"
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
@@ -57,9 +60,11 @@ const TrainerCarousell = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
-
+  useEffect (() =>{
+    AOS.init({})
+  },[])
   const TrainerCard = ({ trainer }) => (
-    <div className="w-full min-w-[300px] flex-shrink-0 px-4">
+    <div className="w-full min-w-[300px] flex-shrink-0 px-4" data-aos="fade-right">
       <div className="bg-black border border-[#AA00FA] rounded-lg p-6 relative overflow-hidden h-[580px]">
         <div className="flex flex-col h-full space-y-4">
           <div className="flex space-x-2 justify-between">

@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import dw from '../public/dw.png'
 import nor from '../public/noroott.png'
@@ -7,11 +8,17 @@ import cs from '../public/cs.png'
 import dota from '../public/dota.png'
 import forr from '../public/for.png'
 import lol from '../public/lol.png'
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react"
 
 const Main = () => {
+  useEffect (() =>{
+    AOS.init({})
+  },[])
   return (
     <>
-    <div className="pt-[150px]  w-[100%]">
+    <div className="pt-[150px]  w-[100%] " data-aos="fade-right">
         <div className="top flex">
         <div className="right pl-[12%]">
             <p className="text-[60px] font-bold w-[552px] leading-[60px] uppercase text-[white] mb-[5px]">персональные тренировки с PRO-геймерами </p>

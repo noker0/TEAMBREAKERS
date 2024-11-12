@@ -3,22 +3,28 @@
 @tailwind utilities;
 
 :root{
-    background: #1f1f1f;
+    background: #141414;
 }
 ::-webkit-scrollbar{
-    background-color: #1f1f1f;
+    background-color: #141414;
     width: 10px;
 }
-
+::-webkit-scrollbar:hover{
+  background: #AA00FA;
+}
 ::-webkit-scrollbar-thumb{
     background-color:  #AA00FA;
     border-radius: 50px;
     cursor: pointer;
+    cursor: grab;
 }
 ::-webkit-scrollbar-thumb:hover{
     background: white
 }
-
+::-webkit-scrollbar-thumb:active{
+    cursor: grabbing;
+    
+}
 
 @keyframes pulseBorder {
   0% {
@@ -41,7 +47,5 @@
 .pulse-glow:hover {
   animation: pulseBorder 2s infinite;
 }
-
-
 
 

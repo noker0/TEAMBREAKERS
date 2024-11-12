@@ -1,8 +1,15 @@
+"use client"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { useEffect } from "react"
 
 const Trainers = () => {
+      useEffect (() =>{
+        AOS.init({})
+      },[])
   return (
     <>
-        <div className="mt-[100px] hover:p-color-[#AA00FA] group h-[300px] ">
+        <div className="mt-[100px] hover:p-color-[#AA00FA] group h-[300px] " data-aos="zoom-in-up">
             <p className="text-white font-bold text-[55px] flex justify-center group-hover:text-[#AA00FA] transition-colors duration-300">НАШИ ТРЕНЕРЫ</p>
             <div className="flex justify-center">
             <div className="bg-[#AA00FA] h-[10px] w-[40%] group-hover:bg-[white] duration-300 group-hover:w-[50%]"></div>
