@@ -129,7 +129,7 @@ const Pricing = () => {
             <div className="" data-aos="zoom-in">
                 <div className="top flex items-center justify-center gap-[20px]">
                     <div className="left flex flex-col gap-[15px]">
-                        <div className="bg-[black] w-[400px] h-[100px] rounded-[25px] border-[2px] border-[#AA00FA] pulse-glow">
+                        <div className="bg-[black] w-[400px] h-[100px] rounded-[25px] border-[2px] border-[#AA00FA] pulse-glow ">
                             <div className="top flex items-center justify-between px-[20px] h-[100px]">
                             <p className='text-[white] font-bold text-[28px]'>ПАКЕТ START</p>
                             <div className="">

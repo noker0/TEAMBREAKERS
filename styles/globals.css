@@ -8,10 +8,9 @@
 ::-webkit-scrollbar{
     background-color: #141414;
     width: 10px;
+    border-radius: 50px;
 }
-::-webkit-scrollbar:hover{
-  background: #AA00FA;
-}
+
 ::-webkit-scrollbar-thumb{
     background-color:  #AA00FA;
     border-radius: 50px;
@@ -19,12 +18,15 @@
     cursor: grab;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background: white
+    background: white;
 }
+
 ::-webkit-scrollbar-thumb:active{
     cursor: grabbing;
     
 }
+
+
 
 @keyframes pulseBorder {
   0% {
@@ -48,4 +50,31 @@
   animation: pulseBorder 2s infinite;
 }
 
+@keyframes rotateGold {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 
+@keyframes stopRotate {
+  0% {
+      transform: rotate(360deg);
+  }
+  75% {
+      transform: rotate(45deg);
+  }
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotateGold 5s infinite linear;
+}
+
+.animate-stop {
+  animation: stopRotate 5s forwards cubic-bezier(0.4, 0, 0.2, 1);
+}

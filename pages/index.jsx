@@ -6,6 +6,9 @@ import Trainers from "@/components/Trainers";
 import TrainerCarousel from '@/components/TrainerCarousel';
 import TrainerCarousell from "@/components/TrainerCarousell";
 import TrainerCarouselll from "@/components/TrainerCarouselll";
+import Blogers from "@/components/Blogers";
+import Paket from "@/components/Paket";
+import Poket from "@/components/Poket";
 
 const Home = ()=>{
     return(
@@ -19,6 +22,9 @@ const Home = ()=>{
             <TrainerCarousel />
             <TrainerCarousell/>
             <TrainerCarouselll/>
+            <Blogers/>
+            <Paket/>
+            <Poket/>
         </div>
         </>
     )
