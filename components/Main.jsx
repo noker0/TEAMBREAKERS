@@ -14,7 +14,9 @@ import { useEffect } from "react"
 
 const Main = () => {
   useEffect (() =>{
-    AOS.init({})
+    AOS.init({
+      duration: 1000
+    })
   },[])
   return (
     <>
