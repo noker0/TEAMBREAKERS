@@ -9,12 +9,12 @@ import TrainerCarouselll from "@/components/TrainerCarouselll";
 import Blogers from "@/components/Blogers";
 import Paket from "@/components/Paket";
 import Poket from "@/components/Poket";
+import Footer from "@/components/footer";
 
 const Home = ()=>{
     return(
         <>
         <div>
-            <Navbar/>
             <Main/>
             <Cards/>
             <Pricing/>
