@@ -1,8 +1,14 @@
-
+import Form from "@/components/Form"
+import Trets from "@/components/Trets"
 
 const Fueture = () => {
   return (
-    <div>Fueture</div>
+    <>
+    <div className="">
+      <Form/>
+      <Trets/>
+    </div>
+    </>
   )
 }
 

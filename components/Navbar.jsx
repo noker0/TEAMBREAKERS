@@ -22,7 +22,7 @@ const Navbar = () => {
                 <li><a href="" className="text-white text-[13px] font-bold duration-300 hover:text-[#BDBDBD] duration-300 ">ТРЕНЕРЫ</a></li>
                 <li><a href="" className="text-white text-[13px] font-boldpx] font-bold duration-300 hover:text-[#BDBDBD] duration-300 ">ОТЗЫВЫ</a></li>
                 <li><a href="" className="text-white text-[13px] font-boldpx] font-bold duration-300 hover:text-[#BDBDBD] duration-300 ">ТАРИФЫ</a></li>
-                <li><a href="" className="text-white text-[13te text-[13px] font-bold duration-300 hover:text-[#BDBDBD] duration-300 ">ТРЕНЕРОВКИ С БЛОГЕРАМИ</a></li>
+                <li><a href="" className="text-white text-[13te text-[13px] font-bold duration-300 hover:text-[#BDBDBD] duration-300 ">НОВОСТИ</a></li>
             </ul>
            <Link href="Fueture"> <button className="bg-[white] w-[240px] h-[50px] rounded-[500px] font-bold duration-300 hover:bg-[#AA00FA] text-black">ХОЧУ СТАТЬ ТРЕНЕРОМ</button></Link>
         </nav>
