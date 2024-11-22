@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
+    "jquery-parallax.js": "^1.5.0",
     "lucide-react": "^0.456.0",
     "next": "15.0.2",
     "react": "^18.2.0",
