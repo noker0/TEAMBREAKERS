@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        phone: { max: "640px" }, // Только для телефонов
+      },
       boxShadow: {
         'solid': '-10px -10px 0px rgba(225, 225, 225, 100)',
         'solidy': '-10px -10px 0px rgba(170, 0, 250, 98)',

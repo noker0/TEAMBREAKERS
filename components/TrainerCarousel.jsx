@@ -2,14 +2,14 @@
 
 import AOS from "aos"
 import "aos/dist/aos.css"
-import { useEffect } from "react"
-import React, { useState } from 'react';
+import { useEffect, useState } from "react"
+import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
-
 const TrainerCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const trainers = [
     {
@@ -48,10 +48,22 @@ const TrainerCarousel = () => {
         "Опыт прохода с Open до Main ESEA League"
       ]
     },
-  
   ];
 
   const totalSlides = trainers.length;
+
+  useEffect(() => {
+    AOS.init({});
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -60,11 +72,9 @@ const TrainerCarousel = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
-  useEffect (() =>{
-    AOS.init({})
-  },[])
+
   const TrainerCard = ({ trainer }) => (
-    <div className="w-full min-w-[300px] flex-shrink-0 px-4" data-aos="fade-right">
+    <div className="w-full min-w-[300px] flex-shrink-0 px-4 mt-[50px]" data-aos="fade-right">
       <div className="bg-black border border-[#AA00FA] rounded-lg p-6 relative overflow-hidden h-[580px]">
         <div className="flex flex-col h-full space-y-4">
           <div className="flex space-x-2 justify-between">
@@ -76,7 +86,7 @@ const TrainerCarousel = () => {
             </span>
           </div>
 
-          <div className="relative w-48 h-48 mx-auto rounded-full border-2 border-[#AA00FA] overflow-hidden hover:w-[400px] duration-300 cursor-pointer">
+          <div className="relative w-48 h-48 mx-auto rounded-full border-2 border-[#AA00FA] overflow-hidden hover:w-[250px] duration-300 cursor-pointer">
             <Image
               src={trainer.image}
               alt={`Тренер ${trainer.name}`}
@@ -122,47 +132,57 @@ const TrainerCarousel = () => {
 
   return (
     <div className="relative w-full max-w-7xl mx-auto px-4 mb-[50px]">
-      <div className="flex items-center">
-        <button 
-          onClick={prevSlide} 
-          className="p-2 text-white hover:text-[#AA00FA] transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft size={48} />
-        </button>
-
-        <div className="flex overflow-hidden w-full">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${totalSlides * 100}%` }}
+      {!isMobile ? (
+        <div className="flex items-center">
+          <button 
+            onClick={prevSlide} 
+            className="p-2 text-white hover:text-[#AA00FA] transition-colors"
+            aria-label="Previous slide"
           >
-            {trainers.map((trainer, index) => (
-              <TrainerCard key={index} trainer={trainer} />
-            ))}
+            <ChevronLeft size={48} />
+          </button>
+
+          <div className="flex overflow-hidden w-full">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${totalSlides * 100}%` }}
+            >
+              {trainers.map((trainer, index) => (
+                <TrainerCard key={index} trainer={trainer} />
+              ))}
+            </div>
           </div>
+
+          <button 
+            onClick={nextSlide} 
+            className="p-2 text-white hover:text-[#AA00FA] transition-colors"
+            aria-label="Next slide"
+          >
+            <ChevronRight size={48} />
+          </button>
         </div>
+      ) : (
+        <div className="flex flex-col space-y-4">
+          {trainers.map((trainer, index) => (
+            <TrainerCard key={index} trainer={trainer} />
+          ))}
+        </div>
+      )}
 
-        <button 
-          onClick={nextSlide} 
-          className="p-2 text-white hover:text-[#AA00FA] transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight size={48} />
-        </button>
-      </div>
-
-      <div className="flex justify-center space-x-2 mt-4">
-        {trainers.map((_, index) => (
-          <button
-            key={index}
-            className={`w-6 h-4 rounded-full transition-colors ${
-              currentSlide === index ? 'bg-[#AA00FA]' : 'bg-white'
-            }`}
-            onClick={() => setCurrentSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {!isMobile && (
+        <div className="flex justify-center space-x-2 mt-4">
+          {trainers.map((_, index) => (
+            <button
+              key={index}
+              className={`w-6 h-4 rounded-full transition-colors ${
+                currentSlide === index ? 'bg-[#AA00FA]' : 'bg-white'
+              }`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
