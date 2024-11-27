@@ -150,8 +150,8 @@ const Footer = () => {
               <iframe
               className="w-[600px] h-[300px]"
                 src="https://www.youtube.com/embed/GQL8YDs6uNA?start=6"
-                frameborder="0"
-                allowfullscreen
+                frameBorder="0"
+                allowFullScreen
               ></iframe>
             </div>
           </div>
